@@ -44,11 +44,11 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 5em 2em;
-    border-radius: 8px;
 }
 
 .card {
     padding: 3em;
+    max-width: 600px;
 }
 .card:nth-child(1) {
     background-color: var(--card-1-bg);
@@ -109,4 +109,37 @@ main {
 
 .attribution a:hover {
     opacity: 0.6;
+}
+
+@media screen and (min-width: 960px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+    .center-hv {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        max-width: 300px;
+        padding: 4em 3em;
+    }
+
+    .card:nth-child(1) {
+        background-color: var(--card-1-bg);
+        border-radius: 8px 0 0 8px;
+    }
+    .card:nth-child(2) {
+        background-color: var(--card-2-bg);
+    }
+    .card:nth-child(3) {
+        background-color: var(--card-3-bg);
+        border-radius: 0 8px 8px 0;
+    }
+    .card-button {
+        margin-top: 6em;
+    }
 }
